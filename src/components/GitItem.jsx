@@ -1,3 +1,5 @@
+import PropsType from 'prop-types'
+
 export const GitItem = ({ title, url, id }) => {
     return (
         <div className="card">
@@ -5,4 +7,9 @@ export const GitItem = ({ title, url, id }) => {
             <p>{ title }</p>
         </div>
     )
+}
+
+GitItem.PropsType = {
+    title: PropsType.string.isRequired,
+    url: PropsType.string.isRequired
 }
